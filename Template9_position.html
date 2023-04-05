@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Put your description here.">
+    <meta name="theme-color" content="#317EFB" />
+    <title>flomic sonic</title>
+    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family:sans-serif;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .inside {
+
+        width: 80%;
+        margin: auto;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    /* header1 */
+
+    .left{
+        width:25%;
+        position: fixed;
+        background-color: #4b5056;
+        height:100%;   
+    }
+    .leftimg{
+        padding:50px 0;
+    }
+    .right{
+        background-color: coral;
+        background-image: url('/images/headpic.webp');
+        background-size: cover;
+        height:500px;
+    }
+    .nav  a{
+        border:1px solid gray;
+        padding:15px;
+        text-align: center;
+        background-color: #393e42;
+        display: block;
+        border-left-width: 5px ;
+        text-decoration: none;
+    }
+    .nav .home{
+        border-left-color: #39a9e3; 
+        color:#39a9e3;
+    }
+    .nav .aboutus{
+        border-left-color: #e9b145; 
+        color:#e9b145;
+    }
+    .nav .services{
+        border-left-color: #954fe9; 
+        color:#954fe9;
+    }
+    .nav .portfolio{
+        border-left-color: #39e492; 
+        color:#39e492;
+    }
+    .nav .contact{
+        border-left-color: #e2387b; 
+        color:#e2387b;
+    }
+    .margin{
+        margin-left: 25%;
+    }
+    .blackbg{
+        background-color: rgba(0,0,0,0.5); 
+        height: 500px; 
+        display: flex; 
+        flex-wrap: wrap; 
+        align-items: center; 
+        text-align: center;
+    }
+    .layout{
+        width:100%; 
+        color:white; 
+        padding: 0 150px;
+        font-size: 20px;
+    }
+    .layout > button{
+        background-color: #39a9e3; 
+        padding:10px; 
+        color:white;
+        border:1px solid #39a9e3;
+        border-bottom-width: 5px;
+        border-bottom-color: #196f9b;
+        font-size: 15px;
+    }
+    .radio{
+        padding:30px;
+    }
+
+    /* header2 */
+
+    .welcome{
+        color:#39a9e3;  
+        text-align: center;
+    }
+    .welcome > p:nth-child(1){
+        font-size: 30px;
+    }
+    .welcome > p:nth-child(2){
+        color:gray;
+    }
+
+    /* header3 */
+
+    .about{
+        padding:40px 0;
+    }
+    .orangehr{
+        border:3px solid #dba014; 
+        margin: 0;
+    }
+    .about > button{
+        background-color: #e9b145; 
+        color: white; 
+        padding:15px; 
+        border:1px solid #e9b145; 
+        font-size: 20px;
+    }
+    .people{
+        display:grid; 
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-between;
+    }
+    .people1, .people2, .people3{
+        text-align: center;
+    }
+    .team{
+        font-size: 30px; 
+        color:#e9b145;
+    }
+    .ourteam{
+        display: grid;
+        grid-template-columns: 75% 20%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .teamdesc{
+        color:gray;
+    }
+
+    /* header4 */
+
+    .services{
+        padding:40px 0;
+    }
+    .violethr{
+        border:3px solid #7c1ee4; 
+        margin: 0;
+    }
+    .services > button{
+        background-color: #984cea; 
+        color: white; 
+        padding:15px; 
+        border:1px solid #984cea; 
+        font-size: 20px;
+    }
+    .ourservices{
+        display:grid; 
+        grid-template-columns: 30% 30% 30%; 
+        justify-content: space-between; 
+        padding: 30px 0;
+    }
+    .service1{
+        display:grid; 
+        grid-template-columns: 30% 50%; 
+        background-color: #984cea; 
+        align-items: center;
+        justify-content: center; 
+        color: white;
+    }
+    .service2{
+        display:grid; 
+        grid-template-columns: 30% 60%; 
+        background-color: #984cea; 
+        align-items: center;
+        justify-content: center; 
+        color: white;
+    }
+    .skills > p{
+        color:#984cea; 
+        font-size: 30px;
+    }
+    .ourskills{
+        display: grid; 
+        grid-template-columns: 60% 30%; 
+        justify-content: space-between;
+    }
+    .skills1{
+        line-height: 2;
+    }
+    .bar{
+        width:100%;
+    }
+    .hr{
+        border:10px solid rgb(231, 229, 229); 
+        margin: 0; 
+        border-radius: 2px;
+    }
+    .fill{
+        border:10px solid #984cea; 
+        margin: 0; 
+        border-radius: 2px; 
+        position: relative; 
+        bottom:20px;
+    }
+    .wording{
+        position: relative; 
+        bottom:36px; 
+        margin: 0; 
+        color: white; 
+        font-size: 12px; 
+        text-align: center; 
+    }
+    
+    /* header5 */
+
+    .port{
+        padding:40px 0;
+    }
+    .greenhr{
+        border:3px solid #1fcb79; 
+        margin: 0;
+    }
+    .port > button{
+        background-color: #39e492; 
+        color: white; 
+        padding:15px; 
+        border:1px solid #39e492; 
+        font-size: 20px;
+    }
+    .row{
+        display: grid; 
+        grid-template-columns: 30% 30% 30%; 
+        justify-content: space-between; 
+        text-align: center; 
+        padding-bottom:30px; 
+        color: #39e492;
+    }
+    .load{
+        text-align: center;
+        padding:30px;
+    }
+    .load > button{
+        background-color: #39e492; 
+        padding:10px; 
+        color:white;
+        border:1px solid #39e492;
+        border-bottom-width: 4px;
+        border-bottom-color: #1fcb79;
+        font-size: 15px;
+    }
+
+    /* header6 */
+
+    .contact{
+        padding:40px 0;
+    }
+    .pinkhr{
+        border:3px solid #cd1e61; 
+        margin: 0;
+    }
+    .contact > button{
+        background-color: #e2387b; 
+        color: white; 
+        padding:15px; 
+        border:1px solid #e2387b; 
+        font-size: 20px;
+    }
+    .map{
+        padding: 40px 0;
+    }
+    .iframe{
+        border:5px double gray;
+    }
+    .form{
+        color:gray;
+    }
+    .send{
+        padding:20px 0;
+    }
+    .formr1{
+        display: grid; 
+        grid-template-columns: 30% 30% 30%; 
+        justify-content: space-between; 
+        padding-bottom:30px;
+    }
+    .formr1 > div > input[type=text]{
+        padding:10px 30px;
+    }
+    .send > button{
+        background-color: #e2387b; 
+        padding:10px; 
+        color:white;
+        border:1px solid #e2387b;
+        border-bottom-width: 4px;
+        border-bottom-color: #cd1e61;
+        font-size: 15px;
+    }
+
+    /* header7 */
+
+    .header7{
+        padding-top:40px;
+    }
+    .footer{
+        background-color: #4b5056; 
+        border:0px solid #4b5056; 
+        border-left-width:5px; 
+        border-left-color:#393e42 ;
+    }
+    .foot1{
+        padding:30px; 
+        text-align: center;
+        color: white;
+    }
+    .foot2{
+        color:gray; 
+        background-color: #393e42; 
+        padding:20px;
+    }
+    .foot1 > p > .fa-brands{
+        padding:20px; 
+        background-color: #393e42;
+    }
+    .foot1 > p > .fa-solid{
+        padding:20px; 
+        background-color: #393e42;
+    }
+    /* @media only screen and (max-width: 576px){
+            .row1 .inside div {
+                width: 100%;
+            }
+    } */
+    
+
+</style>
+
+<body>
+    <header class="header1">
+        <div class="left">
+            <div class="leftimg">
+                <img src="/images/logo1.jpg" alt="">
+            </div>
+            <div class="nav">
+                <a class="home" href="#home">HOME</a>
+                <a class="aboutus" href="#about" style="border-left-color: #e9b145; color:#e9b145;">ABOUT US</a>
+                <a class="services" href="#service" style="border-left-color: #954fe9; color:#954fe9;">SERVICES</a>
+                <a class="portfolio" href="#portfolio" style="border-left-color: #39e492; color:#39e492;">PORTFOLIO</a>
+                <a class="contact" href="#contact" style="border-left-color: #e2387b; color:#e2387b;">CONTACT</a>
+            </div>
+        </div>
+    </header>
+    <div class="margin">
+        <header class="header1" id="home"> 
+            <div class="right">
+                <div class="blackbg">
+                    <div class="inside">
+                        <div class="layout">
+                            <h1> RESPONSIVE LAYOUT</h1>
+                            <p>PELLENTESQUE HABITANT MORBI TRISTIQUE SENECTUS ET NETUS ET MELAESUADA FAMES.</p>
+                            <button><b>READ MORE</b></button>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="1" name="1" aria-label="radio1">
+                            <input type="radio" id="2" name="1" aria-label="radio1">
+                            <input type="radio" id="3" name="1" aria-label="radio1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="header2">
+            <div class="inside">
+                <div class="welcome">
+                    <p> WELCOME TO TEMPLATE</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span style="color: #39a9e3;">Ipsam perspiciatis</span> libero officia repellat illum. Inventore minus aliquid nesciunt quidem recusandae.</p>
+                </div>
+            </div>
+        </header>
+        <header class="header3">
+            <div class="inside">
+                <div class="about">
+                    <hr class="orangehr">
+                    <button id="about">ABOUT US</button>
+                </div>
+                <div class="people">
+                    <div class="people1">
+                        <img src="/images/pic11.jpg" alt="">
+                        <p style="color:#e9b145;">CHRISTINA WELLDONE</p>
+                        <p style="color:gray;">Managing Director</p>
+                    </div>
+                    <div class="people2">
+                        <img src="/images/pic22.jpg" alt="">
+                        <p style="color:#e9b145;">TERI BELLE</p>
+                        <p style="color:gray;">Creative Executive</p>
+                    </div>
+                    <div class="people3">
+                        <img src="/images/pic11.jpg" alt="">
+                        <p style="color:#e9b145;">TAWANA CHERRY</p>
+                        <p style="color:gray;">Company President</p>
+                    </div>
+                </div>
+                <div class="mgmt">
+                    <p class="team">OUR MANAGEMENT TEAM</p>
+                    <div class="ourteam">
+                        <div class="teamdesc">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing  sit amet consectetur adipisicing elit. Possimus vel nobis inventore, corrupti laborum quo cum aut impeditipsum dolor sit amet consectetur adipisicing elit dolorum placeat similique, doloribus earum at impedit dolorum eligendi fuga! Distinctio expedita aliquid, deleniti quae et ut optio animi.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.aperiam doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. A cum aut impedit dolorum eligendi itaque fugit ad similique placeat! Vitae, soluta ducimus? Expedita sit sunt, laboriosam suscipit dolore vitae corporis.</p>    
+                        </div>
+                        <div>
+                            <img src="/images/lap.avif" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="header4">
+            <div class="inside">
+                <div class="services">
+                    <hr class="violethr">
+                    <button id="service">SERVICES</button>
+                </div>
+                <div class="ourservices">
+                    <div class="service1">
+                        <div>
+                            <i class="fa-solid fa-bolt-lightning fa-2x"></i>
+                        </div>
+                        <div>   
+                            <p>The Best Support Ever</p>
+                        </div>
+                    </div>
+                    <div class="service2">
+                        <div>
+                            <i class="fa-solid fa-laptop fa-2x"></i>
+                        </div>
+                        <div>   
+                            <p>Fully Responsive Design</p>
+                        </div>
+                    </div>
+                    <div class="service1">
+                        <div>
+                            <i class="fa-solid fa-pencil fa-2x"></i>
+                        </div>
+                        <div>   
+                            <p>Unlimited Layouts Option</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <p>OUR SKILLS</p>
+                    <div class="ourskills">
+                        <div class="skills1">
+                            <p>Lorem, ipsum dolor sit amet consectetur  animi. Lorem ipsum dolor sit amet consectetur adipisicing elit.aperiam doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. A cum aut impedit dolorum eligendi itaque fugit ad similique placeat! Vitae, soluta ducimus? Expedita sit sunt, laboriosam suscipit dolore vitae corporis.</p>    
+                        </div>
+                        <div class="skills2">
+                            <div class="bar">
+                                <hr class="hr">
+                                <hr class="fill" style="width:90%;">
+                                <p class="wording" style="width:90%;">GRAPHICS 90%</p>
+                            </div>
+                            <div class="bar">
+                                <hr class="hr">
+                                <hr class="fill" style="width:75%;">
+                                <p class="wording" style="width:75%;">HTML5 CSS3 75%</p>
+                            </div>
+                            <div class="bar">
+                                <hr class="hr">
+                                <hr class="fill" style="width:66%;">
+                                <p class="wording" style="width:66%;">WORDPRESS 66%</p>
+                            </div>
+                            <div class="bar">
+                                <hr class="hr">
+                                <hr class="fill" style="width:88%;">
+                                <p class="wording" style="width:88%;">TARGETING 88%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="header5">
+            <div class="inside">
+                <div class="port">
+                    <hr class="greenhr">
+                    <button id="portfolio">PORTFOLIO</button>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="/images/port1.jpg" alt="">
+                        <p>FANTASY</p>
+                    </div>
+                    <div>
+                        <img src="/images/port2.jpg" alt="">
+                        <p>BOTANY</p>
+                    </div>
+                    <div>
+                        <img src="/images/port3.jpg" alt="">
+                        <p>UNIVERSE</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="/images/port4.jpg" alt="">
+                        <p>CHANNEL</p>
+                    </div>
+                    <div>
+                        <img src="/images/port5.jpg" alt="">
+                        <p>DRAGONFLY</p>
+                    </div>
+                    <div>
+                        <img src="/images/port6.jpg" alt="">
+                        <p>TITANIUM</p>
+                    </div>
+                </div>
+                <div class="load">
+                    <button><b>LOAD MORE</b></button>
+                </div>
+            </div>
+        </header>
+        <header class="header6">
+            <div class="inside">
+                <div class="contact">
+                    <hr class="pinkhr">
+                    <button id="contact">CONTACT US</button>
+                </div>
+                <div class="map">
+                    <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15547.985458394558!2d80.2122806!3d13.03590315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266de74ad88a3%3A0xd842d88783c1bd4!2sAshok%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1680673094942!5m2!1sen!2sin" width="800" height="450" class="iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="form">
+                    <form>
+                        <div class="formr1">
+                            <div>
+                                <label aria-label="name" for="name">Name: *</label><br><br>
+                                <input type="text" id="name" name="name" required><br>
+                            </div>
+                            <div>
+                                <label aria-label="email" for="email">Email: *</label><br><br>
+                                <input type="text" id="email" name="email"><br>
+                            </div>
+                            <div>
+                                <label aria-label="sub" for="sub">Subject:</label><br><br>
+                                <input type="text" id="sub" name="sub"><br>
+                            </div>
+                        </div>
+                        <label aria-label="message" for="message">Message:</label><br><br>
+                        <textarea name="message" id="message" rows="10" cols="110"></textarea>
+                    </form>
+                    <div class="send">
+                        <button><b>SEND MESSAGE</b></button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="header7">
+            <div class="footer">
+                <div class="inside">
+                    <div class="foot1">
+                        <p>
+                            <i class="fa-brands fa-facebook-f fa-1x"></i>
+                            <i class="fa-brands fa-twitter fa-1x"></i>
+                            <i class="fa-brands fa-dribbble fa-1x"></i>
+                            <i class="fa-brands fa-linkedin fa-1x"></i>
+                            <i class="fa-solid fa-wifi fa-1x"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="foot2">
+                <div class="inside">
+                    <p>Copyright &#169; 2015 <span style="color:white">Flomic</span></p>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
